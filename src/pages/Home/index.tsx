@@ -1,34 +1,27 @@
-import { ReactComponent as MainImage } from 'assets/images/main-image.svg';
-import ButtonIcon from 'components/ButtonIcon';
-import { Link } from 'react-router-dom';
-
-
+import { ReactComponent as AuthImage } from 'assets/images/auth-image.svg';
+import { Route, Switch } from 'react-router-dom';
+import Login from './Login';
 
 import './styles.css';
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div className="auth-container">
+      <div className="auth-banner-container">
+        <h1>Avalie Filmes
+        </h1>
+        <p>
+        Diga o que você achou do seu filme favorito
+        </p>
+        <AuthImage />
+      </div>
 
-      <div className="base-card home-card">
-        
-        <div className="home-content-container">
-          <div>
-            <h1>Conheça o melhor catálogo de produtos</h1>
-            <p>
-              Ajudaremos você a encontrar os melhores produtos disponíveis no
-              mercado.
-            </p>
-          </div>
-          <div>
-            <Link to="/products">
-              <ButtonIcon text="Inicie agora a sua busca" />
-            </Link>
-          </div>
-        </div>
-        <div className="home-image-container">
-          <MainImage />
-        </div>
+      <div className="auth-form-container">
+        <Switch>
+          <Route path="/">
+            <Login/>
+          </Route>
+        </Switch>
       </div>
     </div>
   );
