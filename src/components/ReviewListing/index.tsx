@@ -9,14 +9,15 @@ type ListingReviews = {
   const ReviewListing = ({ reviews }: ListingReviews) => {
     
     return (
-      <div className="review-main-container">
+      <div className="reviews-container base-card">
         {reviews?.map(review =>(
-          <div className="member-name-container" key={review.id}>
+          <div className="content-reviews" key={review.id}>
+            <div className="cima">
+            <StarImage />
             <h3>{review.user.name}</h3>
-            <div className="star-image-container">
-          <StarImage />
-        </div>
-            <div className="post-review-container base-card">
+            </div>
+            <div className="review">
+            
               <p>{review.text}</p>
             </div>
           </div>

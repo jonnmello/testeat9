@@ -3,6 +3,7 @@ import ButtonIcon from "components/ButtonIcon";
 import { useForm } from "react-hook-form";
 import { Review } from "types/review";
 import { requestBackend } from "util/requests";
+import './styles.css';
 
 type Props = {
     movieId: string;
@@ -71,8 +72,8 @@ return (
           name="text"
         />
         <div className="feedback d-block">{errors.text?.message}</div>
-        <div className="sv-button-container">
-          <ButtonIcon text="salvar" />
+        <div className="bbb">
+          <ButtonIcon text="salvar avaliação" />
         </div>
       </form>
     </div>

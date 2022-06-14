@@ -45,9 +45,13 @@ const handleInsertReview=(review: Review)=>{
     <div className="container">
             <h1>Tela de detalhes do filme id: {movieId}</h1>
             {hasAnyRoles(['ROLE_MEMBER'])&&(
+              <div className="comporeview">
               <ReviewForm movieId={movieId} onInsertReview={handleInsertReview}/>
+              </div>
             )}
+            <div className="compolisting">
          <ReviewListing reviews={reviews}/> 
+         </div>
     </div>
   );
 };
