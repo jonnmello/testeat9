@@ -23,7 +23,7 @@ const Login = () => {
 
   const location = useLocation<LocationState>();
 
-  const {from} = location.state || {from: {pathname: '/admin'}};
+  const {from} = location.state || {from: {pathname: '/movies'}};
 
   const {  setAuthContextData } = useContext(AuthContext);
 
@@ -56,7 +56,7 @@ const Login = () => {
       <h1>LOGIN</h1>
       { hasError && (
       <div className="alert alert-danger">
-        Ocorreu ao tentar efetuar o login
+        Ocorreu erro ao tentar efetuar o login
       </div>
    )}
       <form onSubmit={handleSubmit(onSubmit)}>

@@ -9,9 +9,9 @@ export const BASE_URL = process.env.REACT_APP_BACKEND_URL ??'http://localhost:80
 
 
 
-const CLIENT_ID = process.env.REACT_APP_CLIENT_ID ?? 'dscatalog';
+const CLIENT_ID = process.env.REACT_APP_CLIENT_ID ?? 'myclientid';
 
-const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET ?? 'dscatalog123';
+const CLIENT_SECRET = process.env.REACT_APP_CLIENT_SECRET ?? 'myclientsecret';
 
 
 
@@ -63,7 +63,7 @@ axios.interceptors.response.use(function (response) {
     return response;
   }, function (error) {
     if(error.response.status === 401 ){
-        history.push('/admin/auth');
+        history.push('/');
     }
 
     return Promise.reject(error);
